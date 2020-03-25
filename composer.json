@@ -1,0 +1,43 @@
+{
+    "name": "moecasts/laravel-user-login-log",
+    "description": "A package for log user login info",
+    "keywords": [
+        "laravel",
+        "user-login-log"
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "jenssegers/agent": "^2.6",
+        "php": "^7.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "MoeCasts",
+            "email": "moecasts.caster@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Moecasts\\Laravel\\UserLoginLog\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Moecasts\\Laravel\\UserLoginLog\\Test\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Moecasts\\Laravel\\UserLoginLog\\UserLoginLogServiceProvider"
+            ]
+        }
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0"
+    },
+    "scripts": {
+        "test": "phpunit"
+    }
+}
