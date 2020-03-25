@@ -27,6 +27,7 @@ class DeciveTypeTest extends TestCase
         foreach ($types as $type => $value) {
             $this->assertEquals($type, DeviceType::getType($value));
         }
+        $this->assertNull(DeviceType::getType(5));
     }
 
     public function testGetValue()
