@@ -10,6 +10,14 @@ use function app;
 
 class DeciveTypeTest extends TestCase
 {
+    public function testConstants()
+    {
+        $this->assertEquals(1, DeviceType::DESKTOP);
+        $this->assertEquals(2, DeviceType::TABLET);
+        $this->assertEquals(3, DeviceType::PHONE);
+        $this->assertEquals(4, DeviceType::ROBOT);
+    }
+
     public function testGetType()
     {
         $class = new \ReflectionClass(DeviceType::class);
