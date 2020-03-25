@@ -8,7 +8,7 @@
     "minimum-stability": "dev",
     "require": {
         "jenssegers/agent": "^2.6",
-        "php": "^7.0"
+        "php": "^7.2"
     },
     "license": "MIT",
     "authors": [
