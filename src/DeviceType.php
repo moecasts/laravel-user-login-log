@@ -37,7 +37,5 @@ class DeviceType
         } elseif ($agent->isRobot()) {
             return DeviceType::ROBOT;
         }
-
-        return null;
     }
 }
