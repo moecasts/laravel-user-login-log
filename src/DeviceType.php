@@ -28,14 +28,14 @@ class DeviceType
 
     public static function getValue(Agent $agent): ?int
     {
-        if ($agent->isDesktop()) {
-            return DeviceType::DESKTOP;
-        } else if ($agent->isTablet()) {
+        if ($agent->isTablet()) {
             return DeviceType::TABLET;
         } else if ($agent->isPhone()) {
             return DeviceType::PHONE;
         } elseif ($agent->isRobot()) {
             return DeviceType::ROBOT;
+        } else {
+            return DeviceType::DESKTOP
         }
     }
 }
