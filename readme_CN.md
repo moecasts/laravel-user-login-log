@@ -123,9 +123,9 @@ $user->createLoginLog();
 
 该方法依赖于缓存功能，当新登录时，会创建一个具有时限的缓存，下次请求路由时，来判断是否属于新登录。
 
-> 实现由 `logLogin` 方法的 `$seconds` 参数控制（可留空），默认时限为配置 `loginlogs.expire`。
+> 实现由 `logLogin` 方法的 `$seconds` 参数控制（可留空），默认时限为配置 `loginlog.expire`。
 
-This function is depet on cache, when your newly login, it will set a cache with for `$seconds` or default config ( `loginlogs.expire` ) seconds when `$seconds`  is not set.
+This function is depet on cache, when your newly login, it will set a cache with for `$seconds` or default config ( `loginlog.expire` ) seconds when `$seconds`  is not set.
 
 ```php
 $user = new User;

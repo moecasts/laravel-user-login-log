@@ -120,7 +120,7 @@ $user->createLoginLog();
 
 #### Log when user newly login
 
-This function is depet on cache, when your newly login, it will set a cache with for `$seconds` or default config ( `loginlogs.expire` ) seconds when `$seconds`  is not set.
+This function is depet on cache, when your newly login, it will set a cache with for `$seconds` or default config ( `loginlog.expire` ) seconds when `$seconds`  is not set.
 
 ```php
 $user = new User;
