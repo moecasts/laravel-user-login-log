@@ -35,7 +35,7 @@ class DeviceType
         } elseif ($agent->isRobot()) {
             return DeviceType::ROBOT;
         } else {
-            return DeviceType::DESKTOP
+            return DeviceType::DESKTOP;
         }
     }
 }
