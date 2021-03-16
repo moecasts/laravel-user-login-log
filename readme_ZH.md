@@ -2,8 +2,14 @@
 
 ## 文档
 
-[English](https://github.com/MoeCasts/laravel-wallet)
-[中文](https://www.tore.moe/post/laravel-user-login-log)
+[English](./readme.md)
+[中文](./readme_ZH.md)
+
+[![Build Status](https://www.travis-ci.org/MoeCasts/laravel-wallet.svg?branch=master)](https://www.travis-ci.org/MoeCasts/laravel-wallet)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/MoeCasts/laravel-user-login-log/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/MoeCasts/laravel-user-login-log/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/MoeCasts/laravel-user-login-log/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/MoeCasts/laravel-user-login-log/?branch=master)
+[![Code Intelligence Status](https://scrutinizer-ci.com/g/MoeCasts/laravel-user-login-log/badges/code-intelligence.svg?b=master)](https://scrutinizer-ci.com/code-intelligence)
+![Code Intelligence Status](https://img.shields.io/github/license/MoeCasts/laravel-user-login-log)
 
 [![Build Status](https://www.travis-ci.org/MoeCasts/laravel-wallet.svg?branch=master)](https://www.travis-ci.org/MoeCasts/laravel-wallet)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/MoeCasts/laravel-user-login-log/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/MoeCasts/laravel-user-login-log/?branch=master)
@@ -90,7 +96,7 @@ class Kernel extends HttpKernel
         // ...
         'login.log' => \Moecasts\Laravel\UserLoginLog\Middleware\UserLoginLogMiddleware::class,
     ];
-    
+
     // ...
 }
 ```
@@ -100,8 +106,6 @@ class Kernel extends HttpKernel
 ```php
 Route::get('hello')->middleware(['auth', 'login.log']);
 ```
-
-
 
 ### 方法
 
@@ -125,7 +129,7 @@ $user->createLoginLog();
 
 > 实现由 `logLogin` 方法的 `$seconds` 参数控制（可留空），默认时限为配置 `loginlog.expire`。
 
-This function is depet on cache, when your newly login, it will set a cache with for `$seconds` or default config ( `loginlog.expire` ) seconds when `$seconds`  is not set.
+This function is depet on cache, when your newly login, it will set a cache with for `$seconds` or default config ( `loginlog.expire` ) seconds when `$seconds` is not set.
 
 ```php
 $user = new User;

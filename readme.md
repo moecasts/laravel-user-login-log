@@ -2,16 +2,14 @@
 
 ## Document
 
-[English](https://github.com/MoeCasts/laravel-wallet)
-[中文](https://www.tore.moe/post/laravel-user-login-log)
+[English](./readme.md)
+[中文](./readme_ZH.md)
 
 [![Build Status](https://www.travis-ci.org/MoeCasts/laravel-wallet.svg?branch=master)](https://www.travis-ci.org/MoeCasts/laravel-wallet)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/MoeCasts/laravel-user-login-log/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/MoeCasts/laravel-user-login-log/?branch=master)
 [![Code Coverage](https://scrutinizer-ci.com/g/MoeCasts/laravel-user-login-log/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/MoeCasts/laravel-user-login-log/?branch=master)
-[![Build Status](https://scrutinizer-ci.com/g/MoeCasts/laravel-user-login-log/badges/build.png?b=master)](https://scrutinizer-ci.com/g/MoeCasts/laravel-user-login-log/build-status/master)
 [![Code Intelligence Status](https://scrutinizer-ci.com/g/MoeCasts/laravel-user-login-log/badges/code-intelligence.svg?b=master)](https://scrutinizer-ci.com/code-intelligence)
 ![Code Intelligence Status](https://img.shields.io/github/license/MoeCasts/laravel-user-login-log)
-
 
 ## Feature
 
@@ -91,7 +89,7 @@ class Kernel extends HttpKernel
         // ...
         'login.log' => \Moecasts\Laravel\UserLoginLog\Middleware\UserLoginLogMiddleware::class,
     ];
-    
+
     // ...
 }
 ```
@@ -120,7 +118,7 @@ $user->createLoginLog();
 
 #### Log when user newly login
 
-This function is depet on cache, when your newly login, it will set a cache with for `$seconds` or default config ( `loginlog.expire` ) seconds when `$seconds`  is not set.
+This function is depet on cache, when your newly login, it will set a cache with for `$seconds` or default config ( `loginlog.expire` ) seconds when `$seconds` is not set.
 
 ```php
 $user = new User;
